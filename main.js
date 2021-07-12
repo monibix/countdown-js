@@ -2,7 +2,6 @@ let days = 01;
 let hours = 01;
 let minutes = 01;
 let seconds = 03;
-console.log("days", days)
 
 function draw() {
 document.getElementById("days").innerHTML = days.toString().padStart(2,0);
@@ -15,7 +14,7 @@ draw()
 let startButton = document.getElementById("start")
 
 function countdown() {
-    console.log("contador activado")
+    console.log("countdown started")
     let contador = setInterval(()=> {
         seconds-=1
         document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,0);
@@ -41,9 +40,9 @@ function countdown() {
             hours = 0;
             days =0;
             draw()
-            document.getElementById("final-message").innerHTML = "¡Cuenta Activada!"
+            document.getElementById("final-message").innerHTML = "FIN"
         }
-    },1)
+    },1000)
 }
 
 startButton.addEventListener('click', countdown())
