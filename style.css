@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:;
+}
+
+body{
+    background: linear-gradient(180deg, black, lightgrey);
+    min-height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+.container{
+    border: 2px solid #4C4843 ;
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    background-color: #edf2f4;
+}
+
+.countdown{
+    display: flex;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timmer{
+    background-color:lightgrey;
+    margin-right: 5px;
+    padding: 5px;
+    width: 3.8rem;
+}
+
+.timmer div{
+    text-align: center;
+}
+.timmer :first-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.timmer p{
+    font-size: 0.8rem;
+    text-align: center;
+}
+.colon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+#start {
+    transition: background-color 0.5s ease;
+    padding: 12px 30px;
+    background-color: #fca311;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    color: black;
+}
+#start:hover {
+    cursor: pointer;
+    background-color: #FAD7A0;
+}
+
+#final-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 30px;
+}
