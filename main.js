@@ -1,17 +1,27 @@
-let days = 01;
-let hours = 01;
-let minutes = 01;
-let seconds = 03;
+let days = 0;
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
 
 function draw() {
-document.getElementById("days").innerHTML = days.toString().padStart(2,0);
-document.getElementById("hours").innerHTML = hours.toString().padStart(2,0);
-document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,0);
-document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,0);
+    document.getElementById("days").innerHTML = days.toString().padStart(2,0);
+    document.getElementById("hours").innerHTML = hours.toString().padStart(2,0);
+    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,0);
+    document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,0);
 }
 draw()
 
-let startButton = document.getElementById("start")
+function getUserInput() {
+    let secondsInput = document.getElementById("user-seconds").value
+    seconds = secondsInput;
+    let minutesInput = document.getElementById("user-minutes"). value
+    minutes = minutesInput
+    let hoursInput = document.getElementById("user-hours").value
+    hours = hoursInput
+    let daysInput = document.getElementById("user-days").value
+    days = daysInput
+    draw()
+}
 
 function countdown() {
     console.log("countdown started")
@@ -44,6 +54,5 @@ function countdown() {
         }
     },1000)
 }
-
-startButton.addEventListener('click', countdown())
-//window.onload = countdown()
+let startButton = document.getElementById("start")
+startButton.addEventListener('click', countdown)
